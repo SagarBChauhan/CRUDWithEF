@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EMSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EMSModelStoreContainer">
+    <EntitySet Name="tblEmp" EntityType="EMSModel.Store.tblEmp" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tblEmp">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="256" />
+    <Property Name="Salary" Type="float" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="30" />
+    <Property Name="PersonalWebsite" Type="varchar" MaxLength="100" />
+    <Property Name="HireDate" Type="datetime" />
+  </EntityType>
+</Schema>
